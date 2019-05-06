@@ -1,0 +1,74 @@
+Basic Syntax
+Loops and If Else
+List, Tuples, Dict, Sets
+Functional Programming
+File Handling
+Exception Handling
+
+Math
+- Stats
+- Probability
+- Algebra
+- Calculus (Differentiation)
+- Matrix
+Python
+- Interpreted
+- Dynamically Typed
+
+a = 10
+a = "hello"
+a = 12.34
+
+.py
+.pyc
+
+Data Science
+- Data Collection (Web Crawling)  -- bs4 (Beautiful Soup)
+- Data Analysis (Exploratory Data Analysis) -- Numpy + Pandas
+  - Data Cleaning
+  - Data Mining
+  - Statistical Analysis
+  - Data Preprocessing  -- pandas + sklearn
+    - Handle Missing Values
+    - Feature Scaling (Normalization/Standardization)
+    - Label Encoding
+- Data Visualization -- matplotlib/seaborn/bokeh
+- Predictive Modeling (Machine Learning) -- sklearn
+- Optimization
+- Data Visualization (Show results on graph)
+
+
+Common Files extensions - 
+.csv, .xlsx, .tsv, database, .json
+
+r/w/a
+rb/wb/ab
+
+io
+
+open
+read/write
+close
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
