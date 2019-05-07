@@ -1,0 +1,5 @@
+name,score,strike_rate,wickets
+Sachin,100,80,0
+Dhoni,120,100,0
+Yuvraj,80,100,2
+Umesh,2,120,4
