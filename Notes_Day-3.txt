@@ -1,0 +1,24 @@
+Data Visulization
+- Graphs
+
+Histogram, Pie chart, bar, line, scatter, 
+heat map, box plot, 
+
+Statistics
+
+Histogram
+- it is a frequency plot
+- it do not have a y axis, it has bins(intervals)
+- no gaps b/w bars
+
+
+Measure of Central Tendancy
+- mean, median, mode
+- standard deviation, variance
+
+Distributions
+Uniform, Normal/Gaussian, Poission, Binomial....
+
+
+
+

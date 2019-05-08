@@ -1,0 +1,13 @@
+Bs4 => crawling
+urllib.request => to request url
+
+1. to open url of the website
+2. check if we are getting http Response
+3. make object of bs4.BeautifulSoup and pass httpResponse to it
+4. it will return html of that page
+5. now you have to find out the tag from where you want to extract data
+Pandas
+- Series        - 1d
+- DataFrames    - 2d
+
+Matplotlib/Seaborn
