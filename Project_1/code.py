@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import SentimentAnalysis
+import re, csv
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -74,6 +75,54 @@ class Ui_MainWindow(object):
         self.label_3.setText(_translate("MainWindow", "Positive Reviews"))
         self.label_4.setText(_translate("MainWindow", "Negative Reviews"))
         self.label_5.setText(_translate("MainWindow", "Total Reviews"))
+
+        self.pushButton.clicked.connect(self.prediction)
+        self.printAnalysis()
+
+    def printAnalysis(self):
+        try:
+            file = open('prediction.txt')
+            self.data = file.read()
+            # print(self.data)
+            pattern = '([0-9]\d+|[0-9])'
+            counts = re.findall(pattern, self.data)
+            self.negCount = int(counts[0])
+            self.posCount = int(counts[1])
+            self.lineEdit.setText(counts[1])
+            self.lineEdit_2.setText(counts[0])
+            self.lineEdit_3.setText(str(int(counts[0])+int(counts[1])))
+
+        except BaseException:
+            file = open('prediction.txt','w')
+            data = "Negative : 0, Positive : 0"
+            file.write(data)
+        finally:
+            file.close()
+
+    def prediction(self):
+        text = self.textEdit.toPlainText()
+        pred = SentimentAnalysis.test(text)
+        # print(pred)
+        if pred == 'Negative':
+            self.negCount += 1
+        else:
+            self.posCount += 1
+
+        self.readWrite(self.negCount, self.posCount)
+        self.saveReview(text,pred)
+
+    def readWrite(self,neg,pos):
+        with open('prediction.txt','w') as file:
+            data = "Negative : {}, Positive : {}".format(neg,pos)
+            file.write(data)
+        self.printAnalysis()
+
+    def saveReview(self,text,pred):
+        file = open('reviews.csv','a',newline='')
+        data = {"review":text, "pred":pred}
+        writer = csv.writer(file)
+        writer.writerow(data.values())
+        file.close()
 
 if __name__ == "__main__":
     import sys
